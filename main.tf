@@ -16,8 +16,8 @@ resource "azurerm_resource_group" "rg1-new" {
   name     = "RG"
   location = "West Europe"
 
-  resource "azurerm_resource_group" "rg2-new" {
-  name     = "RG1"
+  resource "azurerm_resource_group" "rg4-new" {
+  name     = "RG5"
   location = "West Europe"
   }
 resource "azurerm_storage_account" "st1" {
