@@ -3,7 +3,7 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "4.70.0"
-    }
+ }   }
   }
 }
 
@@ -15,7 +15,11 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg1-new" {
   name     = "RG"
   location = "West Europe"
-}
+
+  resource "azurerm_resource_group" "rg2-new" {
+  name     = "RG1"
+  location = "West Europe"
+  }
 resource "azurerm_storage_account" "st1" {
   name                     = "st1kasyorage"
   resource_group_name      = azurerm_resource_group.rg1-new.name
